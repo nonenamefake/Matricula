@@ -26,23 +26,58 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        dktpanel = new javax.swing.JDesktopPane();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        itmmenu = new javax.swing.JMenu();
+        itmestudiante = new javax.swing.JMenuItem();
+        itmcurso = new javax.swing.JMenuItem();
+        itmdocente = new javax.swing.JMenuItem();
+        itmsalon = new javax.swing.JMenuItem();
+        itmgradocurso = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        javax.swing.GroupLayout dktpanelLayout = new javax.swing.GroupLayout(dktpanel);
+        dktpanel.setLayout(dktpanelLayout);
+        dktpanelLayout.setHorizontalGroup(
+            dktpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1036, Short.MAX_VALUE)
+        );
+        dktpanelLayout.setVerticalGroup(
+            dktpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 596, Short.MAX_VALUE)
+        );
+
+        itmmenu.setText("Registrar");
+
+        itmestudiante.setText("Estudiantes");
+        itmmenu.add(itmestudiante);
+
+        itmcurso.setText("Cursos");
+        itmmenu.add(itmcurso);
+
+        itmdocente.setText("Docentes");
+        itmmenu.add(itmdocente);
+
+        itmsalon.setText("Salones");
+        itmmenu.add(itmsalon);
+
+        itmgradocurso.setText("Grado-Curso");
+        itmmenu.add(itmgradocurso);
+
+        jMenuBar1.add(itmmenu);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 776, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(dktpanel, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(dktpanel)
         );
 
         pack();
@@ -84,6 +119,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
+    public javax.swing.JDesktopPane dktpanel;
+    public javax.swing.JMenuItem itmcurso;
+    public javax.swing.JMenuItem itmdocente;
+    public javax.swing.JMenuItem itmestudiante;
+    public javax.swing.JMenuItem itmgradocurso;
+    public javax.swing.JMenu itmmenu;
+    public javax.swing.JMenuItem itmsalon;
+    private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }

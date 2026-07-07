@@ -1,18 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
- */
-package Vista;
 
-/**
- *
- * @author Nonename
- */
+package Vista;
 public class Docente extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form Docente
-     */
+ 
     public Docente() {
         initComponents();
     }
@@ -28,20 +18,20 @@ public class Docente extends javax.swing.JInternalFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        btnguardar = new javax.swing.JButton();
+        btneditar = new javax.swing.JButton();
+        btneliminar = new javax.swing.JButton();
+        btnlimpiar = new javax.swing.JButton();
+        btnbuscar = new javax.swing.JButton();
+        txtdni = new javax.swing.JTextField();
+        txttelefono = new javax.swing.JTextField();
+        txtcorreo = new javax.swing.JTextField();
+        cbxespecialidad = new javax.swing.JComboBox<>();
+        txtapellidopa = new javax.swing.JTextField();
+        txtnombre = new javax.swing.JTextField();
+        txtapellidoma = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tbldatos = new javax.swing.JTable();
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -49,55 +39,61 @@ public class Docente extends javax.swing.JInternalFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Docentes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14)))); // NOI18N
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setText("Nuevo");
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 220, -1));
+        btnguardar.setText("Registrar");
+        jPanel2.add(btnguardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 220, -1));
 
-        jButton3.setText("Guardar");
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 220, -1));
+        btneditar.setText("Editar");
+        jPanel2.add(btneditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 220, -1));
 
-        jButton4.setText("Editar");
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 220, -1));
+        btneliminar.setText("Eliminar");
+        jPanel2.add(btneliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, 220, -1));
 
-        jButton5.setText("Eliminar");
-        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, 220, -1));
+        btnlimpiar.setText("Limpiar");
+        btnlimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnlimpiarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnlimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 220, -1));
 
-        jButton6.setText("Limpiar");
-        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 220, -1));
+        btnbuscar.setText("Buscar");
+        jPanel2.add(btnbuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, 220, -1));
 
-        jButton1.setText("Buscar");
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, 220, -1));
+        txtdni.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Dni", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtdni.setPreferredSize(new java.awt.Dimension(67, 40));
+        jPanel2.add(txtdni, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 220, -1));
 
-        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Dni", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jTextField1.setPreferredSize(new java.awt.Dimension(67, 40));
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 220, -1));
+        txttelefono.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Telefono", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txttelefono.setPreferredSize(new java.awt.Dimension(67, 40));
+        jPanel2.add(txttelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 220, -1));
 
-        jTextField6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Telefono", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jTextField6.setPreferredSize(new java.awt.Dimension(67, 40));
-        jPanel2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 220, -1));
+        txtcorreo.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Correo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtcorreo.setMinimumSize(new java.awt.Dimension(64, 40));
+        txtcorreo.setPreferredSize(new java.awt.Dimension(67, 40));
+        jPanel2.add(txtcorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 220, -1));
 
-        jTextField5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Correo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jTextField5.setMinimumSize(new java.awt.Dimension(64, 40));
-        jTextField5.setPreferredSize(new java.awt.Dimension(67, 40));
-        jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 220, -1));
+        cbxespecialidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxespecialidad.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Especialidad", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        cbxespecialidad.setName(""); // NOI18N
+        cbxespecialidad.setPreferredSize(new java.awt.Dimension(72, 50));
+        jPanel2.add(cbxespecialidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 220, 50));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Especialidad", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jComboBox1.setName(""); // NOI18N
-        jComboBox1.setPreferredSize(new java.awt.Dimension(72, 50));
-        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 220, 50));
+        txtapellidopa.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Apellido Paterno", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtapellidopa.setPreferredSize(new java.awt.Dimension(67, 40));
+        jPanel2.add(txtapellidopa, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 220, -1));
 
-        jTextField3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Apellido Paterno", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jTextField3.setPreferredSize(new java.awt.Dimension(67, 40));
-        jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 220, -1));
+        txtnombre.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombres", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtnombre.setMinimumSize(new java.awt.Dimension(64, 40));
+        txtnombre.setPreferredSize(new java.awt.Dimension(67, 40));
+        jPanel2.add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 220, -1));
 
-        jTextField2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombres", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jTextField2.setMinimumSize(new java.awt.Dimension(64, 40));
-        jTextField2.setPreferredSize(new java.awt.Dimension(67, 40));
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 220, -1));
+        txtapellidoma.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Apellido Materno", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtapellidoma.setPreferredSize(new java.awt.Dimension(67, 40));
+        jPanel2.add(txtapellidoma, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 220, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 620));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tbldatos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -108,7 +104,7 @@ public class Docente extends javax.swing.JInternalFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tbldatos);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 680, 620));
 
@@ -126,23 +122,27 @@ public class Docente extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnlimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlimpiarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnlimpiarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JComboBox<String> jComboBox1;
+    public javax.swing.JButton btnbuscar;
+    public javax.swing.JButton btneditar;
+    public javax.swing.JButton btneliminar;
+    public javax.swing.JButton btnguardar;
+    public javax.swing.JButton btnlimpiar;
+    public javax.swing.JComboBox<String> cbxespecialidad;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    public javax.swing.JTable tbldatos;
+    public javax.swing.JTextField txtapellidoma;
+    public javax.swing.JTextField txtapellidopa;
+    public javax.swing.JTextField txtcorreo;
+    public javax.swing.JTextField txtdni;
+    public javax.swing.JTextField txtnombre;
+    public javax.swing.JTextField txttelefono;
     // End of variables declaration//GEN-END:variables
 }

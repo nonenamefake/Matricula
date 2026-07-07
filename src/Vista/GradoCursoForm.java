@@ -8,12 +8,12 @@ package Vista;
  *
  * @author Nonename
  */
-public class Salones extends javax.swing.JInternalFrame {
+public class GradoCursoForm extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form Salones
+     * Creates new form GradoCursoform
      */
-    public Salones() {
+    public GradoCursoForm() {
         initComponents();
     }
 
@@ -28,17 +28,14 @@ public class Salones extends javax.swing.JInternalFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        txtcodigo = new javax.swing.JTextField();
-        txtnombre = new javax.swing.JTextField();
-        spncapacidad = new javax.swing.JSpinner();
         cbxgrado = new javax.swing.JComboBox<>();
         btnguardar = new javax.swing.JButton();
-        btneditar = new javax.swing.JButton();
         btneliminar = new javax.swing.JButton();
         btnlimpiar = new javax.swing.JButton();
         btnbuscar = new javax.swing.JButton();
+        cbxcurso = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tbldato = new javax.swing.JTable();
+        tbldatos = new javax.swing.JTable();
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -46,29 +43,14 @@ public class Salones extends javax.swing.JInternalFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Salon", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtcodigo.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Codigo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        txtcodigo.setPreferredSize(new java.awt.Dimension(67, 40));
-        jPanel2.add(txtcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 220, -1));
-
-        txtnombre.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombres", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        txtnombre.setMinimumSize(new java.awt.Dimension(64, 40));
-        txtnombre.setPreferredSize(new java.awt.Dimension(67, 40));
-        jPanel2.add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 220, -1));
-
-        spncapacidad.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Capacidad", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jPanel2.add(spncapacidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 220, 50));
-
         cbxgrado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6" }));
         cbxgrado.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Grados", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         cbxgrado.setName(""); // NOI18N
         cbxgrado.setPreferredSize(new java.awt.Dimension(72, 50));
-        jPanel2.add(cbxgrado, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 220, 50));
+        jPanel2.add(cbxgrado, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 220, 50));
 
         btnguardar.setText("Registrar");
-        jPanel2.add(btnguardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 220, -1));
-
-        btneditar.setText("Editar");
-        jPanel2.add(btneditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 220, -1));
+        jPanel2.add(btnguardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 220, -1));
 
         btneliminar.setText("Eliminar");
         jPanel2.add(btneliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 220, -1));
@@ -79,9 +61,15 @@ public class Salones extends javax.swing.JInternalFrame {
         btnbuscar.setText("Buscar");
         jPanel2.add(btnbuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 220, -1));
 
+        cbxcurso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6" }));
+        cbxcurso.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cursos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        cbxcurso.setName(""); // NOI18N
+        cbxcurso.setPreferredSize(new java.awt.Dimension(72, 50));
+        jPanel2.add(cbxcurso, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 220, 50));
+
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 490));
 
-        tbldato.setModel(new javax.swing.table.DefaultTableModel(
+        tbldatos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -92,7 +80,7 @@ public class Salones extends javax.swing.JInternalFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(tbldato);
+        jScrollPane1.setViewportView(tbldatos);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 520, 490));
 
@@ -115,17 +103,14 @@ public class Salones extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnbuscar;
-    public javax.swing.JButton btneditar;
     public javax.swing.JButton btneliminar;
     public javax.swing.JButton btnguardar;
     public javax.swing.JButton btnlimpiar;
+    public javax.swing.JComboBox<String> cbxcurso;
     public javax.swing.JComboBox<String> cbxgrado;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JSpinner spncapacidad;
-    public javax.swing.JTable tbldato;
-    public javax.swing.JTextField txtcodigo;
-    public javax.swing.JTextField txtnombre;
+    public javax.swing.JTable tbldatos;
     // End of variables declaration//GEN-END:variables
 }

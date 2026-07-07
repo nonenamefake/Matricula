@@ -36,7 +36,6 @@ public class Matricula extends javax.swing.JInternalFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -92,9 +91,6 @@ public class Matricula extends javax.swing.JInternalFrame {
         jTextField6.setPreferredSize(new java.awt.Dimension(67, 40));
         jPanel2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 220, -1));
 
-        jButton2.setText("Nuevo");
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 220, -1));
-
         jButton3.setText("Guardar");
         jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 220, -1));
 
@@ -133,7 +129,6 @@ public class Matricula extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
