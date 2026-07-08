@@ -19,4 +19,16 @@ public class GradoCurso implements Serializable {
         Object[] fila = {id_grado_curso, id_grado, id_curso};
         return fila;
     }
+
+    public Object[] RegistroConNombres(String nombreGrado, String nombreCurso) {
+        Object[] fila = {id_grado_curso, nombreGrado, nombreCurso};
+        return fila;
+    }
+
+    public static String nombreGrado(int id) {
+        String[] nombres = {"", "Primer Grado", "Segundo Grado", "Tercer Grado",
+                            "Cuarto Grado", "Quinto Grado", "Sexto Grado"};
+        if (id >= 1 && id <= 6) return nombres[id];
+        return "Desconocido";
+    }
 }

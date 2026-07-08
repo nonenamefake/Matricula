@@ -8,12 +8,12 @@ package Vista;
  *
  * @author Nonename
  */
-public class GradoCursoForm extends javax.swing.JInternalFrame {
+public class DocenteCursoform extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form GradoCursoform
+     * Creates new form DocenteCursoform
      */
-    public GradoCursoForm() {
+    public DocenteCursoform() {
         initComponents();
     }
 
@@ -32,9 +32,9 @@ public class GradoCursoForm extends javax.swing.JInternalFrame {
         btnguardar = new javax.swing.JButton();
         btneliminar = new javax.swing.JButton();
         btnlimpiar = new javax.swing.JButton();
-        btnfiltrar = new javax.swing.JButton();
-        cbxcurso = new javax.swing.JComboBox<>();
         btnbuscar = new javax.swing.JButton();
+        cbxcurso = new javax.swing.JComboBox<>();
+        cbxaños = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbldatos = new javax.swing.JTable();
 
@@ -59,8 +59,8 @@ public class GradoCursoForm extends javax.swing.JInternalFrame {
         btnlimpiar.setText("Limpiar");
         jPanel2.add(btnlimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 220, -1));
 
-        btnfiltrar.setText("Filtrar grados");
-        jPanel2.add(btnfiltrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 220, -1));
+        btnbuscar.setText("Buscar");
+        jPanel2.add(btnbuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 220, -1));
 
         cbxcurso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6" }));
         cbxcurso.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cursos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
@@ -68,8 +68,11 @@ public class GradoCursoForm extends javax.swing.JInternalFrame {
         cbxcurso.setPreferredSize(new java.awt.Dimension(72, 50));
         jPanel2.add(cbxcurso, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 220, 50));
 
-        btnbuscar.setText("Buscar");
-        jPanel2.add(btnbuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 220, -1));
+        cbxaños.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6" }));
+        cbxaños.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Años", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        cbxaños.setName(""); // NOI18N
+        cbxaños.setPreferredSize(new java.awt.Dimension(72, 50));
+        jPanel2.add(cbxaños, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 220, 50));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 490));
 
@@ -92,9 +95,7 @@ public class GradoCursoForm extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 776, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 776, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,10 +109,10 @@ public class GradoCursoForm extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnbuscar;
     public javax.swing.JButton btneliminar;
-    public javax.swing.JButton btnfiltrar;
     public javax.swing.JButton btnguardar;
     public javax.swing.JButton btnlimpiar;
-    public javax.swing.JComboBox<String> cbxcurso;
+    public javax.swing.JComboBox<String> cbxaños;
+    public javax.swing.JComboBox cbxcurso;
     public javax.swing.JComboBox<String> cbxgrado;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

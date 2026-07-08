@@ -1,4 +1,5 @@
 package Modelo;
+import Almacenamiento.CursoPersistencia;
 import java.io.Serializable;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -9,12 +10,24 @@ public class ListaGradoCurso implements Serializable {
 
     public ListaGradoCurso() { ini = fin = null; }
 
+    public String nombreCurso(int idCurso) {
+        ListaCurso lc = CursoPersistencia.RecuperarLista();
+        for (NodoCurso aux = lc.ini; aux != null; aux = aux.sig)
+            if (aux.c.getId_curso() == idCurso)
+                return aux.c.getNombre();
+        return "Desconocido";
+    }
+
     public void MostrarTodos(JTable tabla) {
         String titulos[] = {"id", "Grado", "Curso"};
         DefaultTableModel mt = new DefaultTableModel(null, titulos);
         tabla.setModel(mt);
-        for (NodoGradoCurso aux = ini; aux != null; aux = aux.sig)
-            mt.addRow(aux.gc.Registro());
+        for (NodoGradoCurso aux = ini; aux != null; aux = aux.sig) {
+            Object[] fila = {aux.gc.getId_grado_curso(),
+                             GradoCurso.nombreGrado(aux.gc.getId_grado()),
+                             nombreCurso(aux.gc.getId_curso())};
+            mt.addRow(fila);
+        }
     }
 
     public void MostrarPorGrado(JTable tabla, int idGrado) {
@@ -22,8 +35,12 @@ public class ListaGradoCurso implements Serializable {
         DefaultTableModel mt = new DefaultTableModel(null, titulos);
         tabla.setModel(mt);
         for (NodoGradoCurso aux = ini; aux != null; aux = aux.sig)
-            if (aux.gc.getId_grado() == idGrado)
-                mt.addRow(aux.gc.Registro());
+            if (aux.gc.getId_grado() == idGrado) {
+                Object[] fila = {aux.gc.getId_grado_curso(),
+                                 GradoCurso.nombreGrado(aux.gc.getId_grado()),
+                                 nombreCurso(aux.gc.getId_curso())};
+                mt.addRow(fila);
+            }
     }
 
     public void InsertarGradoCurso(GradoCurso gc) {
@@ -48,10 +65,11 @@ public class ListaGradoCurso implements Serializable {
         }
         actual = null;
     }
+    
 
-    public NodoGradoCurso BuscarPorIdCurso(int idCurso) {
+    public NodoGradoCurso BuscarPorId(int id) {
         for (NodoGradoCurso aux = ini; aux != null; aux = aux.sig)
-            if (aux.gc.getId_curso() == idCurso) return aux;
+            if (aux.gc.getId_grado_curso()== id) return aux;
         return null;
     }
 }

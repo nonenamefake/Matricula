@@ -8,13 +8,15 @@ import javax.swing.JInternalFrame;
 public class ControlMenu implements ActionListener{
      MenuPrincipal vista;
       public ControlMenu(MenuPrincipal fm){
-          vista=fm;
-          vista.itmestudiante.addActionListener(this);
-          vista.itmdocente.addActionListener(this);
-          vista.itmcurso.addActionListener(this);
-          vista.itmsalon.addActionListener(this);
-          vista.itmgradocurso.addActionListener(this);
-      }
+           vista=fm;
+           vista.itmestudiante.addActionListener(this);
+           vista.itmdocente.addActionListener(this);
+           vista.itmcurso.addActionListener(this);
+           vista.itmsalon.addActionListener(this);
+           vista.itmgradocurso.addActionListener(this);
+           vista.itmanios.addActionListener(this);
+           vista.itmdocentecurso.addActionListener(this);
+       }
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()== vista.itmestudiante){
@@ -45,13 +47,33 @@ public class ControlMenu implements ActionListener{
               ControladorSalones cs = new ControladorSalones(sf);
               MostrarInternalFrame(sf);
           }
-         if(e.getSource()== vista.itmgradocurso){
-              GradoCursoForm gf = new GradoCursoForm();
-              gf.setTitle("ASIGNAR CURSOS A GRADOS....");
-              gf.setVisible(true);
-              ControladorGradoCurso cg = new ControladorGradoCurso(gf);
-              MostrarInternalFrame(gf);
-          }
+          if(e.getSource()== vista.itmgradocurso){
+               GradoCursoForm gf = new GradoCursoForm();
+               gf.setTitle("ASIGNAR CURSOS A GRADOS....");
+               gf.setVisible(true);
+               ControladorGradoCurso cg = new ControladorGradoCurso(gf);
+               MostrarInternalFrame(gf);
+           }
+          if(e.getSource()== vista.itmanios){
+               A\u00f1osform af = new A\u00f1osform();
+               af.setTitle("REGISTRO DE A\u00d1OS ACAD\u00c9MICOS....");
+               af.setVisible(true);
+               ControladorAnios ca = new ControladorAnios(af);
+               MostrarInternalFrame(af);
+           }
+           if(e.getSource()== vista.itmdocentecurso){
+                String input = javax.swing.JOptionPane.showInputDialog("Ingrese ID del docente:");
+                if (input == null || input.trim().isEmpty()) return;
+                try {
+                    int idDocente = Integer.parseInt(input.trim());
+                    DocenteCursoform df = new DocenteCursoform();
+                    df.setTitle("ASIGNAR CURSOS - Docente ID: " + idDocente);
+                    ControladorDocenteCurso cd = new ControladorDocenteCurso(df, idDocente);
+                    MostrarInternalFrame(df);
+                } catch (NumberFormatException ex) {
+                    javax.swing.JOptionPane.showMessageDialog(null, "Ingrese un ID valido");
+                }
+            }
 
     }//fin del action
     

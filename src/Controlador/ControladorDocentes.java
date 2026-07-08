@@ -6,6 +6,7 @@ import Almacenamiento.DocentePersistencia;
 import Modelo.*;
 import Procesos.ProcesoDocentes;
 import Vista.Docente;
+import Vista.DocenteCursoform;
 import javax.swing.JOptionPane;
 
 public class ControladorDocentes implements ActionListener {
@@ -22,6 +23,7 @@ public class ControladorDocentes implements ActionListener {
         vista.btnbuscar.addActionListener(this);
         vista.btneliminar.addActionListener(this);
         vista.btnlimpiar.addActionListener(this);
+        vista.btngcurso.addActionListener(this);
         Lista = DocentePersistencia.RecuperarLista();
         Lista.MostrarDocentes(vista.tbldatos);
         botoneslimpiar();
@@ -76,6 +78,20 @@ public class ControladorDocentes implements ActionListener {
             ActualizarVista();
             JOptionPane.showMessageDialog(null, "Docente actualizado.....");
         }
+        if(e.getSource() ==vista.btngcurso){
+            int idDocente = actual.dc.getId_docente();
+            DocenteCursoform dcf = new DocenteCursoform();
+            dcf.setTitle("ASIGNAR CURSOS - Docente ID: " + idDocente);
+            ControladorDocenteCurso cdc = new ControladorDocenteCurso(dcf, idDocente);
+            javax.swing.JDesktopPane dp = (javax.swing.JDesktopPane) vista.getParent();
+            if (dp != null) {
+                dp.removeAll();
+                dp.add(dcf);
+                dcf.setLocation(0, 0);
+                dcf.setVisible(true);
+                dp.repaint();
+            }
+        }
         if (e.getSource() == vista.btnbuscar) {
             String cb = JOptionPane.showInputDialog("Ingrese DNI a buscar..");
             if (cb == null || cb.trim().isEmpty()) return;
@@ -84,7 +100,7 @@ public class ControladorDocentes implements ActionListener {
                 JOptionPane.showMessageDialog(null, "DNI " + cb + " no existe en la lista");
             } else {
                 botonselecion();
-                ProcesoDocentes.MostrarDocentes(actual.dc, vista);
+                ProcesoDocentes.MostrarDocentes(actual.dc, vista);           
             }
         }
         if (e.getSource() == vista.btneliminar) {

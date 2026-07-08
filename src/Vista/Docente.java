@@ -30,6 +30,7 @@ public class Docente extends javax.swing.JInternalFrame {
         txtapellidopa = new javax.swing.JTextField();
         txtnombre = new javax.swing.JTextField();
         txtapellidoma = new javax.swing.JTextField();
+        btngcurso = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbldatos = new javax.swing.JTable();
 
@@ -91,6 +92,9 @@ public class Docente extends javax.swing.JInternalFrame {
         txtapellidoma.setPreferredSize(new java.awt.Dimension(67, 40));
         jPanel2.add(txtapellidoma, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 220, -1));
 
+        btngcurso.setText("Gestion curso");
+        jPanel2.add(btngcurso, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, 220, -1));
+
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 620));
 
         tbldatos.setModel(new javax.swing.table.DefaultTableModel(
@@ -131,6 +135,7 @@ public class Docente extends javax.swing.JInternalFrame {
     public javax.swing.JButton btnbuscar;
     public javax.swing.JButton btneditar;
     public javax.swing.JButton btneliminar;
+    public javax.swing.JButton btngcurso;
     public javax.swing.JButton btnguardar;
     public javax.swing.JButton btnlimpiar;
     public javax.swing.JComboBox<String> cbxespecialidad;

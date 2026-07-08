@@ -21,16 +21,30 @@ public class ControladorGradoCurso implements ActionListener {
         vista.btnguardar.addActionListener(this);
         vista.btneliminar.addActionListener(this);
         vista.btnlimpiar.addActionListener(this);
+        vista.btnfiltrar.addActionListener(this);
         vista.btnbuscar.addActionListener(this);
         Lista = GradoCursoPersistencia.RecuperarLista();
         ProcesoGradoCurso.CargarCursos(vista, CursoPersistencia.RecuperarLista());
         Lista.MostrarTodos(vista.tbldatos);
+        ActualizarVista();
     }
 
     private void ActualizarVista() {
         Lista.MostrarTodos(vista.tbldatos);
         GradoCursoPersistencia.GuardarLista(Lista);
         ProcesoGradoCurso.LimpiarEntradas(vista);
+    }
+    private void botoneslimpiar(){
+        vista.btnguardar.setEnabled(true);
+        vista.btnbuscar.setEnabled(true);
+        vista.btneliminar.setEnabled(false);
+        vista.btnlimpiar.setEnabled(true);
+    }
+    private void botonselecion(){
+        vista.btnguardar.setEnabled(false);
+        vista.btnbuscar.setEnabled(true);
+        vista.btneliminar.setEnabled(true);
+        vista.btnlimpiar.setEnabled(true);
     }
 
     @Override
@@ -59,12 +73,27 @@ public class ControladorGradoCurso implements ActionListener {
                 JOptionPane.showMessageDialog(null, "Asignacion eliminada...");
             }
         }
+        if(e.getSource()==vista.btnbuscar){
+               String cb = JOptionPane.showInputDialog("Ingrese ID a buscar..");
+               try{
+                   actual = Lista.BuscarPorId(Integer.parseInt(cb));
+               }catch(NumberFormatException ex){
+                   JOptionPane.showMessageDialog(null,"Solo se puede ingresar numeros");
+               }
+               
+               if(actual==null){
+                   JOptionPane.showMessageDialog(null,"ID "+cb+" no existe en la lista");
+               }else{
+                   botonselecion();
+                   ProcesoGradoCurso.Mostrarcursogrado(actual.gc, vista);
+               }
+           }
         if (e.getSource() == vista.btnlimpiar) {
             ProcesoGradoCurso.LimpiarEntradas(vista);
             actual = null;
             Lista.MostrarTodos(vista.tbldatos);
         }
-        if (e.getSource() == vista.btnbuscar) {
+        if (e.getSource() == vista.btnfiltrar) {
             String input = JOptionPane.showInputDialog("Ingrese el numero de grado (1-6) para filtrar:");
             if (input == null || input.trim().isEmpty()) return;
             try {

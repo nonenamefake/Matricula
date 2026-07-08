@@ -34,7 +34,11 @@ public class ProcesoGradoCurso {
         for (Modelo.NodoCurso aux = lc.ini; aux != null; aux = aux.sig)
             fa.cbxcurso.addItem(aux.c.getNombre());
     }
-
+    public static void Mostrarcursogrado(GradoCurso cg,GradoCursoForm fa ){
+        ListaGradoCurso lgc = new ListaGradoCurso();
+        fa.cbxcurso.setSelectedItem(lgc.nombreCurso(cg.getId_curso()));
+        fa.cbxgrado.setSelectedItem(cg.getId_grado()+"");
+    }
     private static int obtenerIdCursoPorNombre(String nombre) {
         ListaCurso lc = Almacenamiento.CursoPersistencia.RecuperarLista();
         for (Modelo.NodoCurso aux = lc.ini; aux != null; aux = aux.sig)

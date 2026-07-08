@@ -26,6 +26,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
         dktpanel = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         itmmenu = new javax.swing.JMenu();
@@ -34,6 +37,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
         itmdocente = new javax.swing.JMenuItem();
         itmsalon = new javax.swing.JMenuItem();
         itmgradocurso = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        itmanios = new javax.swing.JMenuItem();
+        itmdocentecurso = new javax.swing.JMenuItem();
+
+        jMenu1.setText("File");
+        jMenuBar2.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar2.add(jMenu2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,6 +79,21 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(itmmenu);
 
+        jMenu3.setText("Gestion");
+
+        itmanios.setText("Años academicos");
+        itmanios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmaniosActionPerformed(evt);
+            }
+        });
+        jMenu3.add(itmanios);
+
+        itmdocentecurso.setText("Docente curso");
+        jMenu3.add(itmdocentecurso);
+
+        jMenuBar1.add(jMenu3);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -77,11 +104,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(dktpanel)
+            .addComponent(dktpanel, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void itmaniosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmaniosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itmaniosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -120,12 +151,18 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JDesktopPane dktpanel;
+    public javax.swing.JMenuItem itmanios;
     public javax.swing.JMenuItem itmcurso;
     public javax.swing.JMenuItem itmdocente;
+    public javax.swing.JMenuItem itmdocentecurso;
     public javax.swing.JMenuItem itmestudiante;
     public javax.swing.JMenuItem itmgradocurso;
     public javax.swing.JMenu itmmenu;
     public javax.swing.JMenuItem itmsalon;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBar2;
     // End of variables declaration//GEN-END:variables
 }

@@ -44,7 +44,7 @@ public class ListaEstudiantes implements Serializable {
            actual=null;
        }
    }
-       public NodoEstudiantes BuscarPordni(int dnibuscar){
+    public NodoEstudiantes BuscarPordni(int dnibuscar){
        NodoEstudiantes encontrado=ini;
        while(encontrado!=null){
            if(encontrado.es.getDni()==dnibuscar)
