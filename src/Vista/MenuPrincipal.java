@@ -40,6 +40,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenu3 = new javax.swing.JMenu();
         itmanios = new javax.swing.JMenuItem();
         itmdocentecurso = new javax.swing.JMenuItem();
+        itmmatricula = new javax.swing.JMenuItem();
+        itmcolaatencion = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        itmañomatricula = new javax.swing.JMenuItem();
 
         jMenu1.setText("File");
         jMenuBar2.add(jMenu1);
@@ -92,7 +96,20 @@ public class MenuPrincipal extends javax.swing.JFrame {
         itmdocentecurso.setText("Docente curso");
         jMenu3.add(itmdocentecurso);
 
+        itmmatricula.setText("Matricula");
+        jMenu3.add(itmmatricula);
+
+        itmcolaatencion.setText("Matricula cola");
+        jMenu3.add(itmcolaatencion);
+
         jMenuBar1.add(jMenu3);
+
+        jMenu4.setText("Registros");
+
+        itmañomatricula.setText("Año matricula");
+        jMenu4.add(itmañomatricula);
+
+        jMenuBar1.add(jMenu4);
 
         setJMenuBar(jMenuBar1);
 
@@ -152,16 +169,20 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JDesktopPane dktpanel;
     public javax.swing.JMenuItem itmanios;
+    public javax.swing.JMenuItem itmañomatricula;
+    public javax.swing.JMenuItem itmcolaatencion;
     public javax.swing.JMenuItem itmcurso;
     public javax.swing.JMenuItem itmdocente;
     public javax.swing.JMenuItem itmdocentecurso;
     public javax.swing.JMenuItem itmestudiante;
     public javax.swing.JMenuItem itmgradocurso;
+    public javax.swing.JMenuItem itmmatricula;
     public javax.swing.JMenu itmmenu;
     public javax.swing.JMenuItem itmsalon;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
     // End of variables declaration//GEN-END:variables

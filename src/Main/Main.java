@@ -8,10 +8,10 @@ import Controlador.*;
 public class Main {
 
     public static void main(String[] args) {
-        MenuPrincipal fm = new MenuPrincipal();
-        ControlMenu cm = new ControlMenu(fm);
+        Login fm = new Login();
+        ControladorLogin cm = new ControladorLogin(fm);
         fm.setVisible(true);
-        fm.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        fm.setLocationRelativeTo(null);
     }
     
 }

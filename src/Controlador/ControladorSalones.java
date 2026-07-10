@@ -6,6 +6,7 @@ import Almacenamiento.SalonPersistencia;
 import Modelo.*;
 import Procesos.ProcesoSalones;
 import Vista.Salones;
+import Vista.Horario;
 import javax.swing.JOptionPane;
 
 public class ControladorSalones implements ActionListener {
@@ -22,6 +23,7 @@ public class ControladorSalones implements ActionListener {
         vista.btnbuscar.addActionListener(this);
         vista.btneliminar.addActionListener(this);
         vista.btnlimpiar.addActionListener(this);
+        vista.btnghorarios.addActionListener(this);
         Lista = SalonPersistencia.RecuperarLista();
         Lista.MostrarSalones(vista.tbldato);
     }
@@ -34,6 +36,25 @@ public class ControladorSalones implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == vista.btnghorarios) {
+            if (actual == null) {
+                JOptionPane.showMessageDialog(null, "Primero busque un salon para gestionar horarios");
+                return;
+            }
+            int idSalon = actual.s.getId_salon();
+            Horario hf = new Horario();
+            hf.setTitle("GESTION DE HORARIOS - Salon: " + actual.s.getCodigo());
+            int idGrado = actual.s.getId_grado();
+            ControladorHorarios ch = new ControladorHorarios(hf, idSalon, idGrado);
+            javax.swing.JDesktopPane dp = (javax.swing.JDesktopPane) vista.getParent();
+            if (dp != null) {
+                dp.removeAll();
+                dp.add(hf);
+                hf.setLocation(0, 0);
+                hf.setVisible(true);
+                dp.repaint();
+            }
+        }
         if (e.getSource() == vista.btnlimpiar) {
             ProcesoSalones.LimpiarEntradas(vista);
             actual = null;

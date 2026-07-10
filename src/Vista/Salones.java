@@ -37,6 +37,7 @@ public class Salones extends javax.swing.JInternalFrame {
         btneliminar = new javax.swing.JButton();
         btnlimpiar = new javax.swing.JButton();
         btnbuscar = new javax.swing.JButton();
+        btnghorarios = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbldato = new javax.swing.JTable();
 
@@ -79,6 +80,9 @@ public class Salones extends javax.swing.JInternalFrame {
         btnbuscar.setText("Buscar");
         jPanel2.add(btnbuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 220, -1));
 
+        btnghorarios.setText("Gestionar horarios");
+        jPanel2.add(btnghorarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 220, -1));
+
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 490));
 
         tbldato.setModel(new javax.swing.table.DefaultTableModel(
@@ -117,6 +121,7 @@ public class Salones extends javax.swing.JInternalFrame {
     public javax.swing.JButton btnbuscar;
     public javax.swing.JButton btneditar;
     public javax.swing.JButton btneliminar;
+    public javax.swing.JButton btnghorarios;
     public javax.swing.JButton btnguardar;
     public javax.swing.JButton btnlimpiar;
     public javax.swing.JComboBox<String> cbxgrado;

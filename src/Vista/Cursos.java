@@ -69,6 +69,7 @@ public class Cursos extends javax.swing.JInternalFrame {
         txtnombre.setPreferredSize(new java.awt.Dimension(67, 40));
         jPanel2.add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 220, -1));
 
+        spinhoras.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         spinhoras.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "HorasSemanal", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         jPanel2.add(spinhoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 220, 50));
 

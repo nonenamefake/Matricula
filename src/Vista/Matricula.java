@@ -28,98 +28,60 @@ public class Matricula extends javax.swing.JInternalFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        cbxaños = new javax.swing.JComboBox();
+        cbxgrado = new javax.swing.JComboBox();
+        cbxsalon = new javax.swing.JComboBox();
+        lbestudiantes = new javax.swing.JLabel();
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(javax.swing.UIManager.getDefaults().getColor("CheckBoxMenuItem.icon.checkmarkColor"));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField1.setText("jTextField1");
-        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Dni", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jTextField1.setPreferredSize(new java.awt.Dimension(67, 40));
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 220, -1));
-
-        jTextField2.setText("jTextField1");
-        jTextField2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Dni", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jTextField2.setMinimumSize(new java.awt.Dimension(64, 40));
-        jTextField2.setPreferredSize(new java.awt.Dimension(67, 40));
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 220, -1));
-
-        jTextField3.setText("jTextField1");
-        jTextField3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Dni", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jTextField3.setPreferredSize(new java.awt.Dimension(67, 40));
-        jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 220, -1));
-
-        jTextField4.setText("jTextField1");
-        jTextField4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Dni", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jTextField4.setMinimumSize(new java.awt.Dimension(64, 40));
-        jTextField4.setPreferredSize(new java.awt.Dimension(67, 40));
-        jPanel2.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 220, -1));
-
-        jDateChooser1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nacimiento", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jDateChooser1.setMinimumSize(new java.awt.Dimension(92, 50));
-        jDateChooser1.setPreferredSize(new java.awt.Dimension(95, 50));
-        jPanel2.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 220, 52));
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sexo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jComboBox1.setName(""); // NOI18N
-        jComboBox1.setPreferredSize(new java.awt.Dimension(72, 50));
-        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 220, 50));
-
-        jTextField5.setText("jTextField1");
-        jTextField5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Dni", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jTextField5.setMinimumSize(new java.awt.Dimension(64, 40));
-        jTextField5.setPreferredSize(new java.awt.Dimension(67, 40));
-        jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 220, -1));
-
-        jTextField6.setText("jTextField1");
-        jTextField6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Dni", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jTextField6.setPreferredSize(new java.awt.Dimension(67, 40));
-        jPanel2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 220, -1));
-
         jButton3.setText("Guardar");
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 220, -1));
-
-        jButton4.setText("Editar");
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 220, -1));
-
-        jButton5.setText("Eliminar");
-        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, 220, -1));
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 330, 220, -1));
 
         jButton6.setText("Limpiar");
-        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 220, -1));
+        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, 220, -1));
 
-        jButton1.setText("Buscar");
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, 220, -1));
+        cbxaños.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6" }));
+        cbxaños.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Años", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        cbxaños.setName(""); // NOI18N
+        cbxaños.setPreferredSize(new java.awt.Dimension(72, 50));
+        jPanel2.add(cbxaños, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 220, 50));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 600));
+        cbxgrado.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6" }));
+        cbxgrado.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Grados", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        cbxgrado.setName(""); // NOI18N
+        cbxgrado.setPreferredSize(new java.awt.Dimension(72, 50));
+        jPanel2.add(cbxgrado, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, 220, 50));
+
+        cbxsalon.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6" }));
+        cbxsalon.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Salon", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        cbxsalon.setName(""); // NOI18N
+        cbxsalon.setPreferredSize(new java.awt.Dimension(72, 50));
+        jPanel2.add(cbxsalon, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 220, 50));
+
+        lbestudiantes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbestudiantes.setText("jLabel1");
+        jPanel2.add(lbestudiantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 440, 20));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 490));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 927, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 678, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -128,20 +90,13 @@ public class Matricula extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
+    public javax.swing.JComboBox cbxaños;
+    public javax.swing.JComboBox cbxgrado;
+    public javax.swing.JComboBox cbxsalon;
+    public javax.swing.JButton jButton3;
+    public javax.swing.JButton jButton6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    public javax.swing.JLabel lbestudiantes;
     // End of variables declaration//GEN-END:variables
 }

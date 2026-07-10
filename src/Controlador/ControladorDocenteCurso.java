@@ -30,6 +30,7 @@ public class ControladorDocenteCurso implements ActionListener, ItemListener {
         Lista = DocenteCursoPersistencia.RecuperarLista();
         ProcesoDocenteCurso.CargarAnios(vista, AnioPersistencia.RecuperarLista());
         vista.cbxcurso.setEnabled(false);
+        ProcesoDocenteCurso.LimpiarEntradas(vista);
         Lista.MostrarPorDocente(vista.tbldatos, idDocente);
     }
 

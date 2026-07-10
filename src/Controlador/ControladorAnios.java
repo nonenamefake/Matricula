@@ -5,16 +5,16 @@ import java.awt.event.ActionEvent;
 import Almacenamiento.AnioPersistencia;
 import Modelo.*;
 import Procesos.ProcesoAnios;
-import Vista.A\u00f1osform;
+import Vista.Añosform;
 import javax.swing.JOptionPane;
 
 public class ControladorAnios implements ActionListener {
     ListaAnioAcademico Lista;
     NodoAnioAcademico actual;
     AnioAcademico aa;
-    A\u00f1osform vista;
+    Añosform vista;
 
-    public ControladorAnios(A\u00f1osform fa) {
+    public ControladorAnios(Añosform fa) {
         vista = fa;
         Lista = new ListaAnioAcademico();
         vista.btnregistrar.addActionListener(this);
