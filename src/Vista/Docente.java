@@ -73,7 +73,7 @@ public class Docente extends javax.swing.JInternalFrame {
         txtcorreo.setPreferredSize(new java.awt.Dimension(67, 40));
         jPanel2.add(txtcorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 220, -1));
 
-        cbxespecialidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxespecialidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Matematica", "Comunicacion", "Historia", "Ciencia", "Musica" }));
         cbxespecialidad.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Especialidad", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         cbxespecialidad.setName(""); // NOI18N
         cbxespecialidad.setPreferredSize(new java.awt.Dimension(72, 50));

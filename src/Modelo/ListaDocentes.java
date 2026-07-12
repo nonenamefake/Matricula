@@ -6,11 +6,9 @@ import javax.swing.table.DefaultTableModel;
 public class ListaDocentes implements Serializable {
     public NodoDocentes ini;
     public NodoDocentes fin;
-
     public ListaDocentes() {
         ini = fin = null;
     }
-
     public void MostrarDocentes(JTable tabla) {
         String titulos[] = {"id", "Dni", "Nombres", "Apellido Paterno", "Apellido Materno", "Especialidad", "Telefono", "Correo"};
         DefaultTableModel mt = new DefaultTableModel(null, titulos);
@@ -19,7 +17,6 @@ public class ListaDocentes implements Serializable {
             mt.addRow(aux.dc.Registro());
         }
     }
-
     public void InsertarDocentes(Docentes dc) {
         NodoDocentes nuevo = new NodoDocentes(dc);
         if (ini == null) {
@@ -31,7 +28,6 @@ public class ListaDocentes implements Serializable {
         fin = nuevo;
         fin.sig = null;
     }
-
     public void EliminarDocentes(NodoDocentes actual) {
         if (actual != null) {
             if (actual == ini) {
@@ -48,7 +44,6 @@ public class ListaDocentes implements Serializable {
             actual = null;
         }
     }
-
     public NodoDocentes BuscarPordni(String dnibuscar) {
         NodoDocentes encontrado = ini;
         while (encontrado != null) {

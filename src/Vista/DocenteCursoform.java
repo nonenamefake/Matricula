@@ -33,7 +33,7 @@ public class DocenteCursoform extends javax.swing.JInternalFrame {
         btneliminar = new javax.swing.JButton();
         btnlimpiar = new javax.swing.JButton();
         btnbuscar = new javax.swing.JButton();
-        cbxcurso = new javax.swing.JComboBox<>();
+        cbxcurso = new javax.swing.JComboBox();
         cbxaños = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbldatos = new javax.swing.JTable();
@@ -41,7 +41,7 @@ public class DocenteCursoform extends javax.swing.JInternalFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(javax.swing.UIManager.getDefaults().getColor("CheckBoxMenuItem.icon.checkmarkColor"));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Salon", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Docente-Curso", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cbxgrado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6" }));
@@ -62,7 +62,7 @@ public class DocenteCursoform extends javax.swing.JInternalFrame {
         btnbuscar.setText("Buscar");
         jPanel2.add(btnbuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 220, -1));
 
-        cbxcurso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6" }));
+        cbxcurso.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6" }));
         cbxcurso.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cursos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         cbxcurso.setName(""); // NOI18N
         cbxcurso.setPreferredSize(new java.awt.Dimension(72, 50));

@@ -38,6 +38,7 @@ public class Matricula extends javax.swing.JInternalFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(javax.swing.UIManager.getDefaults().getColor("CheckBoxMenuItem.icon.checkmarkColor"));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Matricula", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton3.setText("Guardar");
@@ -66,7 +67,7 @@ public class Matricula extends javax.swing.JInternalFrame {
 
         lbestudiantes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbestudiantes.setText("jLabel1");
-        jPanel2.add(lbestudiantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 440, 20));
+        jPanel2.add(lbestudiantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 440, 20));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 490));
 

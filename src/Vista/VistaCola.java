@@ -36,7 +36,7 @@ public class VistaCola extends javax.swing.JInternalFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(javax.swing.UIManager.getDefaults().getColor("CheckBoxMenuItem.icon.checkmarkColor"));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Salon", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cola de estudiante matricula", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnEncolar.setText("Encolar");
@@ -44,10 +44,6 @@ public class VistaCola extends javax.swing.JInternalFrame {
 
         btnAtender.setText("Atender");
         jPanel2.add(btnAtender, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 20, 220, -1));
-
-        lblFrente = new javax.swing.JLabel();
-        lblFrente.setText("Cola vacia");
-        jPanel2.add(lblFrente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 220, 20));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 60));
 
@@ -90,6 +86,5 @@ public class VistaCola extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTable tbldatos;
-    public javax.swing.JLabel lblFrente;
     // End of variables declaration//GEN-END:variables
 }

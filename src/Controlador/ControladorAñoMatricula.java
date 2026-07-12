@@ -10,12 +10,12 @@ import Vista.A\u00f1omatricula;
 
 public class ControladorA\u00f1oMatricula implements ActionListener {
     ListaMatricula Lista;
-    A\u00f1omatricula vista;
+    Añomatricula vista;
     PilaHistorial pila;
     ArbolEstudiantes arbol;
     int ultimoIdAnio;
 
-    public ControladorA\u00f1oMatricula(A\u00f1omatricula fa) {
+    public ControladorAñoMatricula(Añomatricula fa) {
         this.vista = fa;
         vista.btnbuscar.addActionListener(this);
         vista.btnAtras.addActionListener(this);

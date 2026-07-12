@@ -16,7 +16,6 @@ public class ControlMenu implements ActionListener{
             vista.itmsalon.addActionListener(this);
             vista.itmgradocurso.addActionListener(this);
             vista.itmanios.addActionListener(this);
-            vista.itmdocentecurso.addActionListener(this);
             vista.itmmatricula.addActionListener(this);
             vista.itmcolaatencion.addActionListener(this);
             vista.itmañomatricula.addActionListener(this);
@@ -59,29 +58,15 @@ public class ControlMenu implements ActionListener{
                MostrarInternalFrame(gf);
            }
           if(e.getSource()== vista.itmanios){
-               A\u00f1osform af = new A\u00f1osform();
+               Añosform af = new Añosform();
                af.setTitle("REGISTRO DE A\u00d1OS ACAD\u00c9MICOS....");
                af.setVisible(true);
                ControladorAnios ca = new ControladorAnios(af);
                MostrarInternalFrame(af);
            }
-            if(e.getSource()== vista.itmdocentecurso){
-                 String input = javax.swing.JOptionPane.showInputDialog("Ingrese ID del docente:");
-                 if (input == null || input.trim().isEmpty()) return;
-                 try {
-                     int idDocente = Integer.parseInt(input.trim());
-                     DocenteCursoform df = new DocenteCursoform();
-                     df.setTitle("ASIGNAR CURSOS - Docente ID: " + idDocente);
-                     df.setVisible(true);
-                     ControladorDocenteCurso cd = new ControladorDocenteCurso(df, idDocente);
-                     MostrarInternalFrame(df);
-                 } catch (NumberFormatException ex) {
-                     javax.swing.JOptionPane.showMessageDialog(null, "Ingrese un ID valido");
-                 }
-             }
             if(e.getSource()== vista.itmañomatricula){
                  Añomatricula af = new Añomatricula();
-                 af.setTitle("MATRICULAS POR A\u00d1O");
+                 af.setTitle("MATRICULAS POR AñO");
                  af.setVisible(true);
                  ControladorA\u00f1oMatricula ca = new ControladorA\u00f1oMatricula(af);
                  MostrarInternalFrame(af);

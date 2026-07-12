@@ -3,23 +3,32 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/Matricula/src/Vista/DocenteCursoform.java</file>
+            <file>file:/F:/Matricula/src/Controlador/ControladorCola.java</file>
+            <file>file:/F:/Matricula/src/Vista/Añomatricula.java</file>
             <file>file:/F:/Matricula/src/Modelo/Matricula.java</file>
-            <file>file:/F:/Matricula/src/Vista/Añosform.java</file>
-            <file>file:/F:/Matricula/src/Procesos/ProcesoMatriculas.java</file>
+            <file>file:/F:/Matricula/src/Vista/Horario.java</file>
+            <file>file:/F:/Matricula/src/Modelo/Estudiantes.java</file>
             <file>file:/F:/Matricula/src/Controlador/ControladorAnios.java</file>
-            <file>file:/F:/Matricula/src/Controlador/ControladorHorarios.java</file>
-            <file>file:/F:/Matricula/src/Controlador/ControladorSalones.java</file>
-            <file>file:/F:/Matricula/src/Vista/Login.java</file>
+            <file>file:/F:/Matricula/src/Modelo/ListaMatricula.java</file>
             <file>file:/F:/Matricula/src/Procesos/ProcesoDocenteCurso.java</file>
+            <file>file:/F:/Matricula/src/Controlador/ControladorDocenteCurso.java</file>
             <file>file:/F:/Matricula/src/Vista/Matricula.java</file>
             <file>file:/F:/Matricula/src/Main/Main.java</file>
-            <file>file:/F:/Matricula/src/Modelo/ListaHorario.java</file>
-            <file>file:/F:/Matricula/src/Procesos/ProcesoHorarios.java</file>
+            <file>file:/F:/Matricula/src/Vista/Cursos.java</file>
             <file>file:/F:/Matricula/src/Controlador/ControlMenu.java</file>
-            <file>file:/F:/Matricula/src/Controlador/ControladorMatriculas.java</file>
+            <file>file:/F:/Matricula/src/Modelo/AnioAcademico.java</file>
             <file>file:/F:/Matricula/src/Modelo/ListaSalon.java</file>
-            <file>file:/F:/Matricula/src/Controlador/ControladorLogin.java</file>
+            <file>file:/F:/Matricula/src/Vista/VistaCola.java</file>
+            <file>file:/F:/Matricula/src/Vista/Añosform.java</file>
+            <file>file:/F:/Matricula/src/Procesos/ProcesoMatriculas.java</file>
+            <file>file:/F:/Matricula/src/Controlador/ControladorHorarios.java</file>
+            <file>file:/F:/Matricula/src/Vista/MenuPrincipal.java</file>
+            <file>file:/F:/Matricula/src/Modelo/ListaCurso.java</file>
+            <file>file:/F:/Matricula/src/Modelo/ListaHorario.java</file>
+            <file>file:/F:/Matricula/src/Controlador/ControladorAñoMatricula.java</file>
+            <file>file:/F:/Matricula/src/Procesos/ProcesoHorarios.java</file>
+            <file>file:/F:/Matricula/src/Controlador/ControladorCursos.java</file>
+            <file>file:/F:/Matricula/src/Controlador/ControladorMatriculas.java</file>
         </group>
     </open-files>
 </project-private>

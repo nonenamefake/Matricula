@@ -39,7 +39,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         itmgradocurso = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         itmanios = new javax.swing.JMenuItem();
-        itmdocentecurso = new javax.swing.JMenuItem();
         itmmatricula = new javax.swing.JMenuItem();
         itmcolaatencion = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
@@ -92,9 +91,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
         jMenu3.add(itmanios);
-
-        itmdocentecurso.setText("Docente curso");
-        jMenu3.add(itmdocentecurso);
 
         itmmatricula.setText("Matricula");
         jMenu3.add(itmmatricula);
@@ -173,7 +169,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
     public javax.swing.JMenuItem itmcolaatencion;
     public javax.swing.JMenuItem itmcurso;
     public javax.swing.JMenuItem itmdocente;
-    public javax.swing.JMenuItem itmdocentecurso;
     public javax.swing.JMenuItem itmestudiante;
     public javax.swing.JMenuItem itmgradocurso;
     public javax.swing.JMenuItem itmmatricula;

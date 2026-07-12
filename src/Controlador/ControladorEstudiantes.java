@@ -72,7 +72,7 @@ public class ControladorEstudiantes implements ActionListener{
                JOptionPane.showMessageDialog(null,"Estudiante actualizado.....");
            }
            if(e.getSource()==vista.btnbuscar){
-               String cb = JOptionPane.showInputDialog("Ingrese codigo a buscar..");
+               String cb = JOptionPane.showInputDialog("Ingrese Dni a buscar..");
                try{
                    actual = Lista.BuscarPordni(Integer.parseInt(cb));
                }catch(NumberFormatException ex){
